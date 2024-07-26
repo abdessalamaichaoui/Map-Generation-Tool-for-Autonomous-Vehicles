@@ -334,14 +334,14 @@ The primary use of the generated Map is to display it in SiteEditor to help depl
 - **Check Key Features**: Verify that key features (e.g., roads, nearby buildings, landmarks...) align correctly with the corresponding features in other map layers
 
 
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/site01.gif)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/site02.gif)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/site03.gif)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/image.jpg)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/mask.png)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/frame000475.jpg)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/mask.jpg)
-![Alt text](/home/abdessalamaichaoui/Downloads/2d_map_generation/images/segmentation result.png)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/site01.gif)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/site02.gif)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/site03.gif)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/image.jpg)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/mask.png)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/frame000475.jpg)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/mask.jpg)
+![Alt text](https://github.com/abdessalamaichaoui/Map-Generation-Tool-for-Autonomous-Vehicles/blob/main/images/segmentation%20result.png)
 
 
 
