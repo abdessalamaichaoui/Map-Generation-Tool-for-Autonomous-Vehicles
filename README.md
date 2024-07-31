@@ -159,11 +159,11 @@ This project involves several steps to generate a BEV map from vehicle front cam
 
 To apply inverse perspective mapping, first, we need to calculate the Homography matrix \(H\).
 
-$$\lambda.\left(\begin{array}{c}u \\v\\1\end{array}\right)=K.\left(\begin{array}{cccc}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0\end{array}\right).T_{FLU \rightarrow RDF}.T_{V \rightarrow C}.T_{W \rightarrow V} .S. \left(\begin{array}{c}i \\j\\1\end{array}\right)$$
+$$\lambda.\left(\begin{array}{c}u \\ v \\ 1\end{array}\right)=K.T_{FLU \rightarrow RDF}.T_{V \rightarrow C}.T_{W \rightarrow V} .S. \left(\begin{array}{c}i \\ j \\ 1 \end{array}\right)$$
 
 This requires extracting the necessary matrices from the ROS bags:
 
-1. **Intrinsic Matrix \(K\)**:
+1. **Intrinsic Matrix K**:
 
 - Retrieved from the topic `/camera_front/camera_info` in the ROS bags, containing internal parameters of the camera.
 
@@ -173,7 +173,7 @@ This requires extracting the necessary matrices from the ROS bags:
 
 - The camera pose (rotation and translation) in the vehicle frame is stored in the topic `/rosparam_dump`. The messages are in JSON format and can be accessed in Python using `json.loads(msg.data)`. The topic stores different information about the vehicle, including sensors' extrinsic parameters.
 
-- Compute the matrix $T_v_c$ from the extracted parameters, then get $H$.
+- Compute the matrix $$T_v_c$$ from the extracted parameters, then get $$H$$.
 
   
 
@@ -188,15 +188,15 @@ This requires extracting the necessary matrices from the ROS bags:
 
 - Vehicle localization information is stored in the topics `/vehicle_pose` and `/vehicle_pose_global`, which publish the vehicle’s absolute pose.
 
-- Compute the transformation matrix $T_w_v$, then use it to get $H$.
+- Compute the transformation matrix $$T_w_v$$, then use it to get $$H$$.
 
   
 
 5. **Scaling Matrix $S$**:
 
-- Defines the relationship between world coordinates of the ground plane and BEV image coordinates. $\Delta x$ and $\Delta y$ are chosen based on the desired image resolution and computation time, while $X_0$ and $Y_0$ are the map’s top left coordinates in the world frame (in meters).
+- Defines the relationship between world coordinates of the ground plane and BEV image coordinates. $$\Delta x$$ and $$\Delta y$$ are chosen based on the desired image resolution and computation time, while $$X_0$$ and $Y_0$ are the map’s top left coordinates in the world frame (in meters).
 
-$$S=\left(\begin{array}{ccc}s_{x} & 0 & t_x \\0 & s_{y} & t_y \\0 & 0 & 0 \\0 & 0 & 1 \end{array}\right)$$
+$$ S=\left(\begin{array}{ccc}s_{x} & 0 & t_x \\ 0 & s_{y} & t_y \\ 0 & 0 & 0 \\0 & 0 & 1 \end{array}\right) $$
 
 ### Blurred Zone Detection
 
