@@ -159,7 +159,7 @@ This project involves several steps to generate a BEV map from vehicle front cam
 
 To apply inverse perspective mapping, first, we need to calculate the Homography matrix \(H\).
 
-$$ \lambda.\left(\begin{array}{c}u \\v\\1\end{array}\right)=K.\left(\begin{array}{cccc}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0\end{array}\right).T_{FLU \rightarrow RDF}.T_{V \rightarrow C}.T_{W \rightarrow V} .S. \left(\begin{array}{c}i \\j\\1\end{array}\right)$$
+$\lambda.\left(\begin{array}{c}u \\v\\1\end{array}\right)=K.\left(\begin{array}{cccc}1 & 0 & 0 & 0 \\0 & 1 & 0 & 0 \\0 & 0 & 1 & 0\end{array}\right).T_{FLU \rightarrow RDF}.T_{V \rightarrow C}.T_{W \rightarrow V} .S. \left(\begin{array}{c}i \\j\\1\end{array}\right)$
 
 This requires extracting the necessary matrices from the ROS bags:
 
